@@ -2,7 +2,7 @@
 
 def narcissistic(value):
 
-    digits = list(str(value))
+    digits = str(value)
     number_of_digits = len(str(value))
-    sum_of_number = sum(int(x) ** number_of_digits for x in digits)
+    sum_of_number = sum(int(digit) ** number_of_digits for digit in digits)
     return sum_of_number == value
