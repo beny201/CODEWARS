@@ -2,10 +2,10 @@
 
 def dig_pow(n, p):
 
-    list_variables = []
-    for nr in str(n):
-        list_variables.append(int(nr) ** p)
+    total = 0
+    for digit in str(n):
+        total += (int(digit) ** p)
         p += 1
-    if sum(list_variables) % n == 0:
-        return sum(list_variables) // n
+    if total % n == 0:
+        return total // n
     return - 1
