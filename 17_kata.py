@@ -12,4 +12,4 @@ def longest_palindrome(s):
             return max(len(x) for x in empty_list)
     elif len(s) == 1:
         return 1
-    return 0git 
+    return 0 
