@@ -14,3 +14,4 @@ def longest_palindrome(s):
     elif len(s) == 1:
         return 1
     return 0
+    return 0 
