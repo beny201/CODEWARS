@@ -2,21 +2,22 @@
 
 def score(dice):
 
-    counting = 0
-    dictionary = {}
+    outcome = 0
+    qty_of_rolls = {}
 
-    for rol in dice:
-        dictionary[rol] = dice.count(rol)
+    for roll in dice:
+        qty_of_rolls[roll] = dice.count(roll)
 
-    for digit in dictionary:
-        if dictionary[digit] >= 3:
-            counting += 1000 if digit == 1 else digit*100
-            dictionary[digit] -= 3
-        counting += 100 * \
-            dictionary[digit] if digit == 1 else 50 * \
-            dictionary[digit] if digit == 5 else 0
+    for dice_result, result_occurrence in qty_of_rolls.items():
+        if result_occurrence >= 3:
+            outcome += 1000 if dice_result == 1 else dice_result*100
+            result_occurrence -= 3
+        if dice_result == 1:
+            outcome += result_occurrence * 100
+        if dice_result == 5:
+            outcome += result_occurrence * 50
 
-    return counting
+    return outcome
 
 
 """ 
