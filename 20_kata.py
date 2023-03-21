@@ -5,11 +5,9 @@ import re
 
 def order_weight(strng):
 
-    cleaned_string = re.findall(r"\d+", strng)
-    cleaned_string = sorted(cleaned_string)
+    weights_of_members = sorted(re.findall(r"\d+", strng))
 
-    def sum_of_digit(digits):
-        separated = list(digits)
-        return sum(int(digit) for digit in separated)
+    def sum_of_digits(digits):
+        return sum(int(digit) for digit in digits)
 
-    return " ".join(sorted(cleaned_string, key=sum_of_digit))
+    return " ".join(sorted(weights_of_members, key=sum_of_digits))
