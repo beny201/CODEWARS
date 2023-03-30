@@ -24,7 +24,7 @@ def rot13(message):
                 coded_char = chr(unicode_char)
                 coded_sentence += coded_char
             else:
-                coded_char = chr(unicode_char+13)
+                coded_char = chr(unicode_char + 13)
                 coded_sentence += coded_char
         else:
             coded_sentence += char
